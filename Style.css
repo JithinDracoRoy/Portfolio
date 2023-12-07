@@ -131,6 +131,9 @@ p {
   color: crimson;
   font-weight: bold;
 }
+.new{
+  display: none;
+}
 #header .hamburger {
   height: 60px;
   width: 60px;
@@ -290,12 +293,15 @@ p {
   flex-direction: column;
   padding: 30px;
   border-radius: 40px;
-  background-image: url(/Images/img-1.png);
+  background-image: url(Images/tech.jpg);
   background-size: cover;
   margin: 10px 5%;
   position: relative;
   z-index: 1;
   overflow: hidden;
+}
+#services .service-item:hover{
+  box-shadow: 0 5px 15px rgb(250, 3, 3);
 }
 #services .service-item::after {
   content: "";
@@ -305,7 +311,7 @@ p {
   height: 100%;
   width: 100%;
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-  opacity: 0.7;
+  opacity: 0.3;
   z-index: -1;
 }
 #services .service-bottom .icon {
@@ -377,7 +383,7 @@ p {
 #projects .project-img {
   animation-delay: 10s;
   flex-basis: 50%;
-  height: 300px;
+  width: 100%;
   overflow: hidden;
 }
 #projects .project-img::after {
@@ -434,6 +440,9 @@ p {
   position: relative;
   border: 10px solid white;
 }
+#about .col-left .about-img:hover {
+  box-shadow: 0 5px 15px rgb(250, 2, 2);
+}
 #about .col-left .about-img::after {
   content: "";
   position: absolute;
@@ -469,7 +478,7 @@ p {
   transition: 1s ease box-shadow;
 }
 #contact .contact-item:hover {
-  box-shadow: 0 0 5px 0 #0000002c;
+    box-shadow: 0 5px 15px rgb(250, 2, 2);
 }
 #contact .icon {
   width: 70px;
@@ -643,8 +652,15 @@ p {
 /* Media Query for Desktop */
 @media only screen and (min-width: 1200px) {
   /* header */
+  
   #header .hamburger {
     display: none;
+  }
+  .new{
+    display: block;
+  }
+  .new:hover {
+    box-shadow: 0 5px 15px rgb(250, 2, 2);
   }
   #header .nav-list ul {
     position: initial;
@@ -668,5 +684,7 @@ p {
     flex-basis: 22%;
     margin: 1.5%;
   }
+  
+
 }
 /* End Media Query for Desktop */
